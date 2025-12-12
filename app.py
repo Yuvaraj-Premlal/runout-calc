@@ -6,7 +6,12 @@ from typing import Dict, List, Optional, Tuple
 
 import pandas as pd
 import streamlit as st
+import sys
+import importlib.util
 
+st.write("Python:", sys.version)
+st.write("openpyxl installed:", importlib.util.find_spec("openpyxl") is not None)
+st.write("xlrd installed:", importlib.util.find_spec("xlrd") is not None)
 
 # ----------------------------
 # Config / Business Rules
